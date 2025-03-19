@@ -7,6 +7,7 @@ package controller;
 import java.util.ArrayList;
 import model.Order;
 import model.Waiter;
+import view.View;
 
 /**
  *
@@ -16,7 +17,7 @@ public class Controller {
     private Waiter waiter = new Waiter();
     
     public Controller() {
-        new View(this);
+        new View(this).setVisible(true);
 }
     public void makeOrder(){
         waiter.addDish();
