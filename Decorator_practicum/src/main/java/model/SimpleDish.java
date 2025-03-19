@@ -8,6 +8,16 @@ package model;
  *
  * @author Владислав
  */
-public class Order {
+public class SimpleDish implements Dish{
+
+    @Override
+    public String getDescribtion() {
+       return "Нордское рагу";
+    }
+
+    @Override
+    public double cost() {
+        return 50;
+    }
     
 }
