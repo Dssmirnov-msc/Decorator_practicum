@@ -4,6 +4,8 @@
  */
 package controller;
 
+import java.util.ArrayList;
+import model.Order;
 import model.Waiter;
 
 /**
@@ -14,6 +16,13 @@ public class Controller {
     private Waiter waiter = new Waiter();
     
     public Controller() {
-        waiter.addDish();
+        new View(this);
 }
+    public void makeOrder(){
+        waiter.addDish();
+    }
+    
+    public ArrayList<Order> MakeTableOfOrders(){
+        return waiter.getOrders();
+    }
 }

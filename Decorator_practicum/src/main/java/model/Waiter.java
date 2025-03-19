@@ -4,12 +4,14 @@
  */
 package model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author maria
  */
 public class Waiter {
-    
+    private ArrayList<Order> orders = new ArrayList<>();
     public Waiter (){
         
     }
@@ -20,6 +22,13 @@ public class Waiter {
         Dish dish3 = new BreadDecorator(dish2);
         Dish dish4 = new SouceDecorator(dish3);
         Dish dish5 = new BerryDecorator(dish4);
-        System.out.println(dish5.getDescribtion() + " " + dish5.cost());
+        
+        Order order = new Order(dish5.getDescribtion(), dish5.cost());
+        orders.add(order);
+        
+    }
+    
+    public ArrayList<Order> getOrders(){
+        return orders;
     }
 }
