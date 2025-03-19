@@ -4,10 +4,16 @@
  */
 package controller;
 
+import model.Waiter;
+
 /**
  *
  * @author Владислав
  */
 public class Controller {
+    private Waiter waiter = new Waiter();
     
+    public Controller() {
+        waiter.addDish();
+}
 }

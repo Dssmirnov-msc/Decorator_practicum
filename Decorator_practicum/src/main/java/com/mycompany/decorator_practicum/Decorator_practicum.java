@@ -4,6 +4,8 @@
 
 package com.mycompany.decorator_practicum;
 
+import controller.Controller;
+
 /**
  *
  * @author Владислав
@@ -11,6 +13,6 @@ package com.mycompany.decorator_practicum;
 public class Decorator_practicum {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        new Controller();
     }
 }
