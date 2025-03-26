@@ -10,5 +10,5 @@ package model;
  */
 public interface Dish {
     String getDescribtion();
-    double cost();
+    double getCost();
 }

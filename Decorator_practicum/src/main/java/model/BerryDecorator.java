@@ -16,7 +16,7 @@ public class BerryDecorator extends DishDecorator{
         return dish.getDescribtion()+" "+"снежные ягоды";
     }
     
-    public double cost(){
-        return dish.cost() +5;
+    public double getCost(){
+        return dish.getCost() +5;
     }
 }

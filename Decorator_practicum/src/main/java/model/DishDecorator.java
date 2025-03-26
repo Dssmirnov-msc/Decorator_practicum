@@ -18,8 +18,8 @@ public abstract class DishDecorator implements Dish{
         return dish.getDescribtion();
     }
     
-    public double cost(){
-        return dish.cost();
+    public double getCost(){
+        return dish.getCost();
     }
     
 }

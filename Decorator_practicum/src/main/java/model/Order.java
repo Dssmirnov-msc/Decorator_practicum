@@ -4,7 +4,8 @@
  */
 package model;
 
-import java.time.LocalDateTime;
+
+import java.time.LocalTime;
 
 /**
  *
@@ -13,12 +14,12 @@ import java.time.LocalDateTime;
 public class Order {
     private String desribtion;
     private Double cost;
-    private LocalDateTime date;
+    private LocalTime date;
     
     public Order(String describtion, Double cost) {
         this.cost = cost;
         this.desribtion = describtion;
-        this.date = LocalDateTime.now();
+        this.date = LocalTime.now();
     }
 
     public String getDesribtion() {
@@ -37,11 +38,11 @@ public class Order {
         this.cost = cost;
     }
 
-    public LocalDateTime getDate() {
+    public LocalTime getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(LocalTime date) {
         this.date = date;
     }
     

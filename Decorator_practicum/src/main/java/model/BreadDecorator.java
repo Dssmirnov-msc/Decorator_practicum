@@ -16,7 +16,7 @@ public class BreadDecorator extends DishDecorator{
         return dish.getDescribtion()+" "+"Нордская лепёшка";
     }
     
-    public double cost(){
-        return dish.cost() +7;
+    public double getCost(){
+        return dish.getCost() +7;
     }
 }

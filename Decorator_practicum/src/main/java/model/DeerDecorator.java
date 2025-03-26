@@ -17,7 +17,7 @@ public class DeerDecorator extends DishDecorator{
         return dish.getDescribtion()+" "+"Двойная порция оленины";
     }
     
-    public double cost(){
-        return dish.cost() +20;
+    public double getCost(){
+        return dish.getCost() +20;
     }
 }

@@ -15,12 +15,18 @@ import view.View;
  */
 public class Controller {
     private Waiter waiter = new Waiter();
+    private DishBinder binder;
     
     public Controller() {
-        new View(this).setVisible(true);
+        View view = new View(this);
+        view.setVisible(true);
+        binder = new DishBinder();
+        view.setBinder(binder);
+        
 }
     public void makeOrder(){
-        waiter.addDish();
+        binder.initializeIterator();
+        waiter.addDish(binder);
     }
     
     public ArrayList<Order> MakeTableOfOrders(){

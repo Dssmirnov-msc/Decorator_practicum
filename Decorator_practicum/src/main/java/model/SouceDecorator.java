@@ -16,7 +16,7 @@ public class SouceDecorator extends DishDecorator{
         return dish.getDescribtion()+" "+"Огненный соус";
     }
     
-    public double cost(){
-        return dish.cost() +10;
+    public double getCost(){
+        return dish.getCost() +10;
     }
 }

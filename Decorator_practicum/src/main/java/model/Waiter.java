@@ -4,6 +4,7 @@
  */
 package model;
 
+import controller.DishBinder;
 import java.util.ArrayList;
 
 /**
@@ -16,14 +17,14 @@ public class Waiter {
         
     }
     
-    public void addDish(){
+    public void addDish(DishBinder binder){
         Dish dish = new SimpleDish();
-        Dish dish2 = new DeerDecorator(dish);
-        Dish dish3 = new BreadDecorator(dish2);
-        Dish dish4 = new SouceDecorator(dish3);
-        Dish dish5 = new BerryDecorator(dish4);
         
-        Order order = new Order(dish5.getDescribtion(), dish5.cost());
+        while (binder.hasNext()){
+           dish = DecoratorCreator.createDecorator(binder.next(), dish);
+        }
+
+        Order order = new Order(dish.getDescribtion(), dish.getCost());
         orders.add(order);
         
     }
